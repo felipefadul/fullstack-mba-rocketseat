@@ -23,8 +23,25 @@
       bottom: 0;
       padding: 24px;
 
+      &:has(.text-large) {
+        padding: 12px;
+      }
+
       h2 {
+        --max-lines: 3;
+        --line-height: 1.3em;
         margin-top: 8px;
+        display: block; /* Fallback for non-webkit */
+        display: -webkit-box;
+        max-height: calc(
+          var(--line-height) * var(--max-lines)
+        ); /* Fallback for non-webkit */
+        line-height: var(--line-height);
+        -webkit-line-clamp: var(--max-lines);
+        -webkit-box-orient: vertical;
+        line-clamp: var(--max-lines);
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
     }
   }
