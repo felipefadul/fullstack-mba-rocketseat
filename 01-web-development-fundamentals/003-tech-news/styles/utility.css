@@ -16,14 +16,20 @@
 }
 
 .text-2xlarge {
+  --max-lines: 3;
+  --line-height: 1.35em;
   font: var(--h1);
 }
 
 .text-xlarge {
+  --max-lines: 3;
+  --line-height: 1.4em;
   font: var(--h2);
 }
 
 .text-large {
+  --max-lines: 3;
+  --line-height: 1.4em;
   font: var(--h3);
 }
 

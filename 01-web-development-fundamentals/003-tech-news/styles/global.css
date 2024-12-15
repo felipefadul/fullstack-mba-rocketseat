@@ -52,6 +52,7 @@ img {
 
 main {
   margin-top: 40px;
+  gap: 80px;
 }
 
 .container {
@@ -70,4 +71,18 @@ main {
   letter-spacing: 0.04em;
   color: var(--text-color-primary);
   box-shadow: 0px 4px 16px rgba(2, 6, 23, 0.25);
+}
+
+.clamp-text {
+  display: block; /* Fallback for non-webkit */
+  display: -webkit-box;
+  max-height: calc(
+    var(--line-height) * var(--max-lines)
+  ); /* Fallback for non-webkit */
+  line-height: var(--line-height);
+  -webkit-line-clamp: var(--max-lines);
+  -webkit-box-orient: vertical;
+  line-clamp: var(--max-lines);
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

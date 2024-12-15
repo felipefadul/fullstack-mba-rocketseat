@@ -1,3 +1,25 @@
+section header {
+  border-top: 1px solid var(--stroke-color);
+  padding-block: 12px 24px;
+  font: var(--text-span);
+
+  a {
+    justify-self: end;
+    align-items: center;
+    gap: 4px;
+
+    span {
+      background: url("../assets/icons/ArrowRight.svg") no-repeat;
+      width: 16px;
+      height: 16px;
+    }
+
+    &:hover span {
+      background-image: url("../assets/icons/ArrowRightHover.svg");
+    }
+  }
+}
+
 #featured {
   img {
     height: 100%;
@@ -28,21 +50,32 @@
       }
 
       h2 {
-        --max-lines: 3;
-        --line-height: 1.3em;
         margin-top: 8px;
-        display: block; /* Fallback for non-webkit */
-        display: -webkit-box;
-        max-height: calc(
-          var(--line-height) * var(--max-lines)
-        ); /* Fallback for non-webkit */
-        line-height: var(--line-height);
-        -webkit-line-clamp: var(--max-lines);
-        -webkit-box-orient: vertical;
-        line-clamp: var(--max-lines);
-        overflow: hidden;
-        text-overflow: ellipsis;
       }
     }
+  }
+}
+
+#weekly {
+  & > div {
+    grid-template-columns: repeat(4, 292px);
+  }
+
+  img {
+    height: 160px;
+  }
+
+  figure {
+    position: relative;
+
+    .content-tag {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+    }
+  }
+
+  p {
+    margin-top: 8px;
   }
 }
