@@ -15,6 +15,10 @@
   gap: 16px;
 }
 
+.gap-32 {
+  gap: 32px;
+}
+
 .text-2xlarge {
   --max-lines: 3;
   --line-height: 1.35em;
@@ -34,5 +38,7 @@
 }
 
 .text-small {
+  --max-lines: 4;
+  --line-height: 1.6em;
   font: var(--text-small);
 }
