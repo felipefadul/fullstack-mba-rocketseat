@@ -1,6 +1,6 @@
 # Travelgram
 
-- This project is part of the [Full-Stack MBA course](../../) at [Rocketseat](https://www.rocketseat.com.br/). It is a simple web page that displays a travel photo gallery, showing the fundamentals of web development and CSS Flexbox.
+- This project is part of the [Full-Stack MBA course](../../) at [Rocketseat](https://www.rocketseat.com.br/). It is a simple web page that displays a travel photo gallery, showing the fundamentals of web development and CSS Flexbox. You can access this project [here](https://felipefadul.github.io/fullstack-mba-rocketseat/01-web-development-fundamentals/002-travelgram).
 
 ![Preview of a travel photo gallery on a fictional social media called Travelgram](assets/readme/travelgram-preview.png)
 
