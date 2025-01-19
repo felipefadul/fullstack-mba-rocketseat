@@ -1,8 +1,8 @@
 # Recipe Page
 
-- This project is part of the [Full-Stack MBA course](../../) at [Rocketseat](https://www.rocketseat.com.br/). It is a simple web page that displays a recipe, showing the fundamentals of web development.
+- This project is part of the [Full-Stack MBA course](../../) at [Rocketseat](https://www.rocketseat.com.br/). It is a simple web page that displays a recipe, showing the fundamentals of web development. You can access this project [here](https://felipefadul.github.io/fullstack-mba-rocketseat/01-web-development-fundamentals/001-recipe-page).
 
-![Preview of the recipe page for a coffee cupcake with whipped cream](assets/readme/recipe-page-preview.jpg)
+![Preview of the recipe page for a coffee cupcake with whipped cream](assets/readme/recipe-page-preview.png)
 
 ## ✨ Features
 
