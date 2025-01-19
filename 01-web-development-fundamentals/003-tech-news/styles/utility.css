@@ -42,3 +42,7 @@
   --line-height: 1.6em;
   font: var(--text-small);
 }
+
+.max-lines-2 {
+  --max-lines: 2;
+}
