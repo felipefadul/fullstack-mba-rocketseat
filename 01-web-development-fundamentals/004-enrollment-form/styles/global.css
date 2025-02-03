@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   /* Text */
   --font-family: "Poppins", sans-serif;
@@ -18,4 +24,8 @@
 
   /* Semantic */
   --semantic-error: #dc2626;
+}
+
+body {
+  overflow: hidden;
 }
