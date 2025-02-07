@@ -20,11 +20,70 @@
             <img src="assets/icons/ArrowLeft.svg" alt="Left arrow icon" />
             <span>Back</span>
           </div>
+
           <h1>Enrollment form</h1>
           <p>
             Fill in the details below to enroll your child at the Stars of
             Tomorrow kindergarten.
           </p>
+
+          <form method="post" enctype="multipart/form-data">
+            <fieldset class="child-info">
+              <legend>Child's information</legend>
+
+              <div class="input-wrapper">
+                <label for="full-name">Full name</label>
+                <input
+                  type="text"
+                  id="full-name"
+                  name="full-name"
+                  placeholder="Child's name"
+                />
+              </div>
+
+              <div class="input-wrapper">
+                <label for="birth">Date of birth</label>
+                <input type="date" id="birth" name="birth" lang="en" />
+              </div>
+
+              <div class="select-wrapper">
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender">
+                  <option value="woman">Woman</option>
+                  <option value="man">Man</option>
+                  <option value="non-binary">Non-binary</option>
+                  <option value="na">I prefer not to say</option>
+                </select>
+              </div>
+
+              <div class="textarea-wrapper">
+                <label for="medical-info">Medical information</label>
+                <textarea
+                  id="medical-info"
+                  name="medical-info"
+                  cols="30"
+                  rows="10"
+                  placeholder="Does the child have any medical conditions that the school should be aware of? If so, please specify."
+                ></textarea>
+              </div>
+
+              <div class="droparea-wrapper">
+                <input
+                  type="file"
+                  id="birth-certificate"
+                  name="birth-certificate"
+                />
+                <img
+                  src="assets/icons/CloudUpload.svg"
+                  alt="Cloud icon with an upward arrow"
+                />
+                <p>
+                  Click here to <br />
+                  select files
+                </p>
+              </div>
+            </fieldset>
+          </form>
         </div>
       </main>
 
