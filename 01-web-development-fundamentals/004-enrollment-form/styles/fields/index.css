@@ -22,3 +22,28 @@ label {
   display: block;
   margin-bottom: 0.25rem;
 }
+
+input[type="date"] {
+  position: relative;
+
+  &::-webkit-calendar-picker-indicator {
+    opacity: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    background: url(../../assets/icons/Calendar.svg) center/contain;
+    right: 1rem;
+    width: 1.25rem;
+    height: 1.25rem;
+
+    /* Align an absolute element */
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+select {
+  background: url(../../assets/icons/ArrowDown.svg) no-repeat calc(100% - 1rem);
+}
