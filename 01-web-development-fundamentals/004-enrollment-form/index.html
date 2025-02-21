@@ -157,6 +157,38 @@
                 </div>
               </div>
             </fieldset>
+
+            <fieldset class="guardian">
+              <legend>Responsible person's information</legend>
+
+              <div class="input-wrapper">
+                <label for="guardian">Responsible person's name</label>
+                <input type="text" id="guardian" name="guardian" />
+                <small>Main legal guardian and emergency contact</small>
+              </div>
+
+              <div class="input-wrapper">
+                <label for="phone">Phone</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="(21) 99999-9999"
+                />
+              </div>
+
+              <div class="input-wrapper">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required />
+                <div class="error">
+                  <img
+                    src="assets/icons/AlertCircle.svg"
+                    alt="Red alert icon"
+                  />
+                  <span>Enter a valid e-mail address</span>
+                </div>
+              </div>
+            </fieldset>
           </form>
         </div>
       </main>
