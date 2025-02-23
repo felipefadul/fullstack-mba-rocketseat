@@ -11,11 +11,9 @@
   --text-small: 400 0.875rem/1.4 var(--font-family);
   --text-primary: #292524;
   --text-secondary: #57534e;
-  --text-tertiary: #8f8881;
   --text-highlight: #e43a12;
 
   /* Surface */
-  --surface-primary: #ffffff;
   --surface-secondary: #fee7d6;
   --surface-disabled: #e7e5e4;
 
@@ -25,6 +23,10 @@
 
   /* Semantic */
   --semantic-error: #dc2626;
+
+  /* Brand */
+  --brand-mid: #f3541c;
+  --brand-dark: #e43a12;
 }
 
 body {
