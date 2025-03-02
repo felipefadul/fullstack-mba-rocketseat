@@ -83,6 +83,7 @@ This repository will evolve as I progress through the MBA. Each project will hav
    - [Recipe Page](01-web-development-fundamentals/001-recipe-page)
    - [Travelgram](01-web-development-fundamentals/002-travelgram)
    - [Tech News](01-web-development-fundamentals/003-tech-news)
+   - [Enrollment Form](01-web-development-fundamentals/004-enrollment-form)
 
 ## 👨‍💻 Author
 
