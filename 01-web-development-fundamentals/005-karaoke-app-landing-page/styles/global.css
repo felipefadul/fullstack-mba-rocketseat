@@ -34,6 +34,13 @@
   --font-size-large: 1.25rem;
   --font-size-xlarge: 1.5rem;
   --font-size-2xlarge: 2.5rem;
+
+  /* Spacing */
+  --padding-block-base: 1rem;
+  --padding-block-large: 1.5rem;
+  --padding-block-xlarge: 3rem;
+
+  --padding-inline-large: 1.5rem;
 }
 
 html {
@@ -83,5 +90,11 @@ ul[role="list"] {
     --font-size-large: 2rem;
     --font-size-xlarge: 3rem;
     --font-size-2xlarge: 4rem;
+
+    --padding-block-base: 1.5rem;
+    --padding-block-large: 2.5rem;
+    --padding-block-xlarge: 5rem;
+
+    --padding-inline-large: 2rem;
   }
 }
