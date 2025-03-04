@@ -19,6 +19,10 @@
   &:hover {
     --button-background-color: var(--brand-gradient);
     --button-color: var(--surface-color);
+
+    background-clip: initial;
+    -webkit-background-clip: initial;
+    color: var(--button-color);
   }
 
   &[aria-label] {
@@ -57,4 +61,16 @@
 .button-large {
   font-size: 1.125rem;
   padding: 1rem 2rem;
+}
+
+@media (width >= 80em) {
+  .button-small {
+    font-size: var(--font-size-base);
+    padding: 0.75rem 1.5rem;
+  }
+
+  .button-medium {
+    font-size: 1.125rem;
+    padding: 1rem 2rem;
+  }
 }
