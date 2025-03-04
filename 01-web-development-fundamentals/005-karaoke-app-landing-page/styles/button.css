@@ -17,11 +17,7 @@
   color: var(--button-color);
 
   &:hover {
-    --button-background-color: linear-gradient(
-      90deg,
-      var(--brand-color-secondary) 0%,
-      var(--brand-color-primary) 100%
-    );
+    --button-background-color: var(--brand-gradient);
     --button-color: var(--surface-color);
   }
 
