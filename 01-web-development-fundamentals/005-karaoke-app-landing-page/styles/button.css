@@ -1,0 +1,64 @@
+.button {
+  --button-background-color: var(--text-color-primary);
+  --button-color: var(--background-color);
+  border: 0;
+  border-radius: 0.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  cursor: pointer;
+
+  font: var(--font-weight-medium) var(--font-size-base) / 1.5rem
+    var(--font-family);
+
+  background: var(--button-background-color);
+  color: var(--button-color);
+
+  &:hover {
+    --button-background-color: linear-gradient(
+      90deg,
+      var(--brand-color-secondary) 0%,
+      var(--brand-color-primary) 100%
+    );
+    --button-color: var(--surface-color);
+  }
+
+  &[aria-label] {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      border-radius: inherit;
+      inset: 1.5px;
+      background-color: var(--background-color);
+    }
+
+    &::after {
+      content: attr(aria-label);
+      background: var(--button-background-color);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
+
+.button-small {
+  font-size: var(--font-size-small);
+  padding: 0.5rem 1rem;
+}
+
+.button-medium {
+  font-size: var(--font-size-base);
+  padding: 0.75rem 1.5rem;
+}
+
+.button-large {
+  font-size: 1.125rem;
+  padding: 1rem 2rem;
+}
