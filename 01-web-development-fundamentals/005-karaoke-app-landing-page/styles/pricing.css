@@ -1,0 +1,117 @@
+#pricing {
+  --font-size-price: 2rem;
+
+  & header {
+    text-align: center;
+  }
+
+  & .cards-container {
+    margin-top: 2rem;
+  }
+
+  & h3 {
+    font-size: 1.25rem;
+    margin-top: 0;
+  }
+
+  & .card p {
+    margin-top: 0.25rem;
+  }
+
+  & app-pricing {
+    display: block;
+    margin-block: 1.5rem;
+    font: var(--font-weight-bold) var(--font-size-price) / 1.2
+      var(--font-family);
+
+    & small {
+      font: var(--font-weight-base) var(--font-size-base) / 125%
+        var(--font-family);
+      color: var(--text-color-secondary);
+    }
+  }
+
+  & .button {
+    width: 100%;
+  }
+
+  & .separator {
+    height: 1px;
+    margin-block: 2rem;
+    background: radial-gradient(
+      var(--text-color-secondary),
+      var(--surface-color) 70%
+    );
+  }
+
+  & .card:nth-child(3) .separator {
+    margin-block: 1.5rem;
+  }
+
+  & li {
+    background: url(../assets/icons/Check.svg) no-repeat;
+    color: var(--text-color-secondary);
+    padding-left: 2rem;
+  }
+
+  & ul + small {
+    display: block;
+    margin-top: 1.5rem;
+    font-size: 0.875rem;
+    color: var(--text-color-secondary);
+  }
+
+  & .card-premium {
+    position: relative;
+    padding: 2px;
+
+    & .card {
+      padding-top: 4.25rem;
+
+      & span {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        padding: 0.75rem 2rem;
+        background: var(--brand-gradient);
+
+        border-top-left-radius: 1.5rem;
+        border-bottom-right-radius: 1.5rem;
+
+        font: var(--font-weight-semibold) var(--font-size-xsmall)
+          var(--font-family);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--background-color);
+      }
+    }
+
+    &::before {
+      content: "";
+      background: var(--brand-gradient);
+      position: absolute;
+      inset: 0;
+      border-radius: 1.5rem;
+      z-index: -1;
+    }
+  }
+
+  @media (width >= 80em) {
+    --font-size-price: 2.5rem;
+
+    & header {
+      max-width: 50rem;
+      margin-inline: auto;
+    }
+
+    & .card-premium .card {
+      padding-bottom: 6rem;
+    }
+
+    & .button-medium {
+      font-size: var(--font-size-base);
+      padding: 0.75rem 1.5rem;
+    }
+  }
+}
