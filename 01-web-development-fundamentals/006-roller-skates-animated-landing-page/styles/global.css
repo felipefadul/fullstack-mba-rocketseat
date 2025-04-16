@@ -49,3 +49,8 @@ h2 {
   font-size: var(--text-large);
   line-height: 1.2;
 }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
