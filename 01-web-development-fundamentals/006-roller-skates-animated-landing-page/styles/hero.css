@@ -32,6 +32,49 @@
 
     animation: slideUp 6s infinite ease;
   }
+
+  /* Buttons */
+  & .buttons {
+    display: flex;
+    gap: 2.5rem;
+    margin-top: 3rem;
+
+    & .button {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-transform: uppercase;
+
+      border-radius: 5rem;
+
+      transition: transform 300ms ease-out;
+
+      &.buy {
+        display: flex;
+        justify-content: center;
+        width: 13.5rem;
+        padding: 1.5rem 3rem;
+        background-color: var(--snitap-sun);
+      }
+
+      &.play span {
+        display: flex;
+        padding: 1.5rem;
+        border-radius: 50%;
+        background-color: white;
+      }
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    & .shadow {
+      box-shadow: 0px 36px 15px rgba(0, 0, 0, 0.01),
+        0px 20px 12px rgba(0, 0, 0, 0.05), 0px 9px 9px rgba(0, 0, 0, 0.09),
+        0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+  }
 }
 
 @keyframes slideUp {
@@ -116,6 +159,11 @@
 
     & h1 div {
       --height: 2.5rem;
+    }
+
+    & .buttons {
+      gap: 1.5rem;
+      flex-direction: column-reverse;
     }
   }
 }
