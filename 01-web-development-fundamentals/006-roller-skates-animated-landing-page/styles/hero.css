@@ -1,0 +1,121 @@
+#hero {
+  padding-block: 2.5rem;
+
+  & h1 {
+    max-width: 40rem;
+  }
+
+  & h1 div {
+    --height: 5rem;
+    display: inline-block;
+    overflow: hidden;
+    height: var(--height);
+    vertical-align: bottom;
+    width: min-content;
+  }
+
+  & h1 span:nth-child(1),
+  h1 span:nth-child(4) {
+    color: var(--snitap-sky-mid);
+  }
+
+  & h1 span:nth-child(2) {
+    color: var(--snitap-joy-mid);
+  }
+
+  & h1 span:nth-child(3) {
+    color: var(--snitap-leaf-mid);
+  }
+
+  & h1 span {
+    display: block;
+
+    animation: slideUp 6s infinite ease;
+  }
+}
+
+@keyframes slideUp {
+  /* Radical static */
+  0%,
+  22% {
+    transform: translateY(0);
+  }
+
+  /* Fun bounce */
+  23% {
+    transform: translateY(calc((var(--height) * -1) - 15px));
+  }
+
+  25% {
+    transform: translateY(calc((var(--height) * -1) + 10px));
+  }
+
+  27% {
+    transform: translateY(calc((var(--height) * -1) - 5px));
+  }
+
+  29% {
+    transform: translateY(calc((var(--height) * -1) + 5px));
+  }
+
+  /* Fun static */
+  33%,
+  55% {
+    transform: translateY(calc(var(--height) * -1));
+  }
+
+  /* Active bounce */
+  56% {
+    transform: translateY(calc((var(--height) * -2) - 15px));
+  }
+
+  58% {
+    transform: translateY(calc((var(--height) * -2) + 10px));
+  }
+
+  60% {
+    transform: translateY(calc((var(--height) * -2) - 5px));
+  }
+
+  62% {
+    transform: translateY(calc((var(--height) * -2) + 5px));
+  }
+
+  /* Active static */
+  66%,
+  88% {
+    transform: translateY(calc(var(--height) * -2));
+  }
+
+  /* Active bounce */
+  89% {
+    transform: translateY(calc((var(--height) * -3) - 15px));
+  }
+
+  91% {
+    transform: translateY(calc((var(--height) * -3) + 10px));
+  }
+
+  93% {
+    transform: translateY(calc((var(--height) * -3) - 5px));
+  }
+
+  95% {
+    transform: translateY(calc((var(--height) * -3) + 5px));
+  }
+
+  /* Return to radical static */
+  100% {
+    transform: translateY(calc(var(--height) * -3));
+  }
+}
+
+@media (width < 80rem) {
+  #hero {
+    padding-block: 1.25rem;
+
+    & h1 div {
+      --height: 2.5rem;
+    }
+  }
+}

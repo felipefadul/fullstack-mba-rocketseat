@@ -1,7 +1,5 @@
 header {
-  max-width: 80rem;
-  width: 100%;
-  padding: 1.25rem 2rem;
+  padding-block: 1.25rem;
 
   & > nav {
     display: flex;
