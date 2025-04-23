@@ -2,6 +2,18 @@
 
 Welcome to my repository documenting my journey through the **Full-Stack MBA** at [Rocketseat](https://www.rocketseat.com.br/). This program focuses on a **project-based learning methodology**, which perfectly aligns with my passion for hands-on learning and continuous growth.
 
+## 🛠️ MBA Projects Showcase
+
+This repository will evolve as I progress through the MBA. Each project will have its own folder with a `README.md` file containing details about the project, such as the technologies used, how to run the project, features and design. Some projects will be in another repository, and I will link them here:
+
+1. **Web Development Fundamentals**
+   - [Recipe Page](01-web-development-fundamentals/001-recipe-page)
+   - [Travelgram](01-web-development-fundamentals/002-travelgram)
+   - [Tech News](01-web-development-fundamentals/003-tech-news)
+   - [Enrollment Form](01-web-development-fundamentals/004-enrollment-form)
+   - [Karaoke App Landing Page](01-web-development-fundamentals/005-karaoke-app-landing-page)
+   - [Roller Skates Animated Landing Page](01-web-development-fundamentals/006-roller-skates-animated-landing-page)
+
 ## 📝 About the Rocketseat Full-Stack MBA
 
 The **Rocketseat Full-Stack MBA** is a comprehensive program designed for professionals looking to deepen their skills in modern web development, system architecture, and product building. With a focus on **hands-on learning**, the program prepares students to solve real-world challenges by integrating technology, leadership, and business strategy.
@@ -74,18 +86,6 @@ The curriculum is designed to cover a wide spectrum of technologies and strategi
    - Innovation
    - Time management
    - Mental health
-
-## 🛠️ MBA Projects Showcase
-
-This repository will evolve as I progress through the MBA. Each project will have its own folder with a `README.md` file containing details about the project, such as the technologies used, how to run the project, features and design. Some projects will be in another repository, and I will link them here:
-
-1. **Web Development Fundamentals**
-   - [Recipe Page](01-web-development-fundamentals/001-recipe-page)
-   - [Travelgram](01-web-development-fundamentals/002-travelgram)
-   - [Tech News](01-web-development-fundamentals/003-tech-news)
-   - [Enrollment Form](01-web-development-fundamentals/004-enrollment-form)
-   - [Karaoke App Landing Page](01-web-development-fundamentals/005-karaoke-app-landing-page)
-   - [Roller Skates Animated Landing Page](01-web-development-fundamentals/006-roller-skates-animated-landing-page)
 
 ## 👨‍💻 Author
 
