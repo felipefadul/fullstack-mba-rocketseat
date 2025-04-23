@@ -1,6 +1,6 @@
 # Karoake App Landing Page
 
-- This project is part of the [Full-Stack MBA course](../../) at [Rocketseat](https://www.rocketseat.com.br/). It is a fully   responsive web page that displays a karaoke app landing page. You can access this project [here](https://felipefadul.github.io/fullstack-mba-rocketseat/01-web-development-fundamentals/005-karaoke-app-landing-page/).
+- This project is part of the [Full-Stack MBA course](../../) at [Rocketseat](https://www.rocketseat.com.br/). It is a fully responsive web page that displays a karaoke app landing page. You can access this project [here](https://felipefadul.github.io/fullstack-mba-rocketseat/01-web-development-fundamentals/005-karaoke-app-landing-page/).
 
 <div style="display: flex; gap: 10px; align-items: flex-start;">
   <img src="assets/readme/karaoke-app-desktop-preview.jpeg" alt="Desktop preview of a fully responsive landing page for a karaoke app" style="width: 75%;">
