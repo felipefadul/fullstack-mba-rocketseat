@@ -1,4 +1,4 @@
-const currencyExchangeRate = {
+const exchangeRateToBRL = {
   USD: { value: 5.71, symbol: "$" },
   EUR: { value: 6.46, symbol: "€" },
   GBP: { value: 7.57, symbol: "£" },
@@ -7,6 +7,9 @@ const currencyExchangeRate = {
 const form = document.querySelector("form");
 const amount = document.getElementById("amount");
 const currency = document.getElementById("currency");
+const footer = document.querySelector("main footer");
+const description = document.getElementById("description");
+const result = document.getElementById("result");
 
 amount.addEventListener("input", () => {
   amount.value = removeNonDigitCharacters(amount.value);
@@ -15,11 +18,27 @@ amount.addEventListener("input", () => {
 form.onsubmit = (event) => {
   event.preventDefault();
 
-  const currencyConverted = convertCurrency(
-    amount.value,
-    currencyExchangeRate[currency.value].value,
-    currencyExchangeRate[currency.value].symbol
-  );
+  try {
+    const selectedCurrency = currency.value;
+    const currencyValueInBRL = exchangeRateToBRL[selectedCurrency].value;
+    const currencySymbol = exchangeRateToBRL[selectedCurrency].symbol;
+
+    const currencyConverted = convertCurrencyToBRL(
+      amount.value,
+      currencyValueInBRL
+    );
+
+    description.textContent = `${currencySymbol}1 ${selectedCurrency} = ${formatCurrencyToBRL(
+      currencyValueInBRL
+    )} BRL`;
+    result.textContent = `${currencyConverted} BRL`;
+
+    footer.classList.add("show-result");
+  } catch (error) {
+    footer.classList.remove("show-result");
+    alert("An error has occurred while converting the currency.");
+    throw error;
+  }
 };
 
 function removeNonDigitCharacters(value) {
@@ -27,7 +46,14 @@ function removeNonDigitCharacters(value) {
   return value.replace(nonDigitCharacterRegex, "");
 }
 
-function convertCurrency(amount, price, symbol) {
+function convertCurrencyToBRL(amount, price) {
   const convertedValue = amount * price;
-  return `${symbol} ${convertedValue.toFixed(2)}`;
+  return convertedValue.toFixed(2);
+}
+
+function formatCurrencyToBRL(value) {
+  return Number(value).toLocaleString("en-US", {
+    style: "currency",
+    currency: "BRL",
+  });
 }
