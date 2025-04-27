@@ -13,6 +13,7 @@ This repository will evolve as I progress through the MBA. Each project will hav
    - [Enrollment Form](01-web-development-fundamentals/004-enrollment-form)
    - [Karaoke App Landing Page](01-web-development-fundamentals/005-karaoke-app-landing-page)
    - [Roller Skates Animated Landing Page](01-web-development-fundamentals/006-roller-skates-animated-landing-page)
+   - [Currency Converter](01-web-development-fundamentals/007-currency-converter)
 
 ## 📝 About the Rocketseat Full-Stack MBA
 
