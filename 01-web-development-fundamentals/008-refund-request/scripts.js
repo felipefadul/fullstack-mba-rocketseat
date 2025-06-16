@@ -3,6 +3,8 @@ const title = document.getElementById("title");
 const category = document.getElementById("category");
 const amount = document.getElementById("amount");
 const expenseList = document.querySelector("ul");
+const expenseQuantity = document.querySelector("aside header p span");
+const expenseTotalAmount = document.querySelector("aside header h2");
 
 amount.oninput = () => {
   const amountValue = removeNonDigitCharacters(amount.value);
@@ -37,6 +39,7 @@ form.onsubmit = (event) => {
   };
 
   addExpense(newExpense);
+  updateTotalAmount();
 
   form.reset();
   title.focus();
@@ -77,6 +80,7 @@ function addExpense(newExpense) {
     removeIcon.setAttribute("alt", "Remove expense");
     removeIcon.onclick = () => {
       expenseItem.remove();
+      updateTotalAmount();
     };
 
     expenseItem.append(expenseIcon, expenseInfo, expenseAmount, removeIcon);
@@ -85,4 +89,30 @@ function addExpense(newExpense) {
     console.error(error);
     alert("An unexpected error has occurred.");
   }
+}
+
+function updateTotalAmount() {
+  const totalItems = expenseList.children.length;
+
+  expenseQuantity.textContent = `${totalItems} ${
+    totalItems === 1 ? "expense" : "expenses"
+  }`;
+
+  let totalAmountInCents = 0;
+  for (const expense of expenseList.children) {
+    const itemAmount = expense.querySelector(".expense-amount");
+    const itemAmountValue = removeNonDigitCharacters(itemAmount.textContent);
+    const itemAmountValueInCents = Number(itemAmountValue) / 100;
+
+    if (isNaN(itemAmountValueInCents)) {
+      alert("Invalid amount value.");
+      return;
+    }
+
+    totalAmountInCents += itemAmountValueInCents;
+  }
+
+  expenseTotalAmount.innerHTML = `<small>$</small>${formatCurrencyToUSD(
+    totalAmountInCents
+  ).replace("$", "")}`;
 }
