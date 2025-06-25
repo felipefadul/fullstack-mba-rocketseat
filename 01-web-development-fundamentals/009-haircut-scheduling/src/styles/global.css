@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Font Family */
+  --font-family-primary: "Catamaran", sans-serif;
+
+  /* Font Weights */
+  --font-weight-bold: 700;
+
+  /* Font Sizes */
+  --font-size-small: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-large: 1.5rem;
+
+  /* Colors (Yellow) */
+  --color-yellow-light: #dbc170;
+  --color-yellow: #b8952e;
+
+  /* Colors (Gray) */
+  --color-gray-100: #f5f4f5;
+  --color-gray-200: #b2afb6;
+  --color-gray-300: #98959d;
+  --color-gray-400: #7a767f;
+  --color-gray-500: #3e3c41;
+  --color-gray-600: #2e2c30;
+  --color-gray-700: #232225;
+  --color-gray-800: #19181b;
+  --color-gray-900: #050505;
+
+  /* Spacing */
+  --spacing-medium: 0.75rem;
+  --spacing-large: 1.25rem;
+  --spacing-xlarge: 1.5rem;
+
+  /* Border Radius */
+  --border-radius-small: 0.5rem;
+  --border-radius-medium: 0.75rem;
+
+  /* Transitions */
+  --transition-fast: 0.2s;
+  --transition-medium: 0.3s;
+
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-base);
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-yellow);
+}
+
+body {
+  background-color: var(--color-gray-800);
+  color: var(--color-gray-100);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: calc(100vh - var(--spacing-xlarge));
+  grid-template-areas: "form schedule";
+
+  padding: var(--spacing-medium);
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  background-color: var(--color-gray-600);
+  padding: var(--spacing-medium) var(--spacing-large);
+  border-bottom-right-radius: var(--border-radius-medium);
+
+  height: 3.5rem;
+  width: 8.7rem;
+}
+
+@media (width < 70rem) {
+  :root {
+    font-size: var(--font-size-small);
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
