@@ -89,7 +89,7 @@
 
 ::-webkit-calendar-picker-indicator {
   cursor: pointer;
-  background: url("../assets/icons/arrow-down.svg") no-repeat;
+  background: url('../assets/icons/arrow-down.svg') no-repeat;
 }
 
 .hours {

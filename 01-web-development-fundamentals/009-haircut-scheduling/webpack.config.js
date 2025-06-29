@@ -1,18 +1,18 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
-  target: "web",
-  mode: "development",
-  entry: path.resolve(__dirname, "src", "main.js"),
+  target: 'web',
+  mode: 'development',
+  entry: path.resolve(__dirname, 'src', 'main.js'),
   output: {
-    filename: "main.js",
-    path: path.resolve(__dirname, "dist"),
+    filename: 'main.js',
+    path: path.resolve(__dirname, 'dist'),
   },
   devServer: {
     static: {
-      directory: path.join(__dirname, "dist"),
+      directory: path.join(__dirname, 'dist'),
     },
     port: 3000,
     open: true,
@@ -20,14 +20,14 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "index.html"),
-      favicon: path.resolve("src", "assets", "icons", "scissors.svg"),
+      template: path.resolve(__dirname, 'index.html'),
+      favicon: path.resolve('src', 'assets', 'icons', 'scissors.svg'),
     }),
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, "src", "assets"),
-          to: path.resolve(__dirname, "dist", "src", "assets"),
+          from: path.resolve(__dirname, 'src', 'assets'),
+          to: path.resolve(__dirname, 'dist', 'src', 'assets'),
         },
       ],
     }),
@@ -36,18 +36,18 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        use: ["style-loader", "css-loader"],
+        use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
           options: {
-            presets: ["@babel/preset-env"],
+            presets: ['@babel/preset-env'],
           },
         },
       },
     ],
   },
-};
+}
