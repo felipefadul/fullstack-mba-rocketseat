@@ -1,6 +1,7 @@
 import dayjs from 'dayjs'
 import { openingHours } from '../../utils/opening-hours.js'
 import { convertHoursTo12hFormat } from '../../utils/convert-hours.js'
+import { clickAvailableHours } from './click-available-hours.js'
 
 const hours = document.getElementById('hours')
 
@@ -34,6 +35,8 @@ export function loadHours({ date = dayjs() }) {
 
     hours.append(li)
   })
+
+  clickAvailableHours()
 }
 
 function addHourPeriod(periodTitle) {
