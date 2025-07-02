@@ -6,9 +6,11 @@ import { clickAvailableHours } from './click-available-hours.js'
 const hours = document.getElementById('hours')
 
 export function loadHours({ date = dayjs() }) {
+  hours.innerHTML = ''
+
   const openingHoursWithAvailability = openingHours.map((hour) => {
     const currentDate = dayjs()
-    const [scheduleHour] = hour.split(':')
+    const scheduleHour = hour.split(':')[0]
     const isHourAvailable = dayjs(date)
       .add(scheduleHour, 'hour')
       .isAfter(currentDate)
