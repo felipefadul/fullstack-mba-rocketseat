@@ -1,6 +1,7 @@
 import dayjs from 'dayjs'
 import { convertHoursTo24hFormat } from '../../utils/convert-hours.js'
 import { scheduleNewAppointment } from '../../services/schedule-new-appointment.js'
+import { loadSchedulesOfTheDay } from '../schedules/load-schedules-of-the-day.js'
 
 const form = document.querySelector('form')
 const selectedDate = document.getElementById('date')
@@ -44,6 +45,10 @@ form.onsubmit = async (event) => {
     }
 
     await scheduleNewAppointment(newAppointment)
+
+    await loadSchedulesOfTheDay({ selectedDate })
+
+    clientNameInput.value = ''
   } catch (error) {
     console.error(error)
     alert('An unexpected error has occurred while scheduling an appointment')

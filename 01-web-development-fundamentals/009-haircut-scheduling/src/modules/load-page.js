@@ -1,5 +1,7 @@
 import { loadSchedulesOfTheDay } from './schedules/load-schedules-of-the-day.js'
 
-document.addEventListener('DOMContentLoaded', () => {
-  loadSchedulesOfTheDay()
+const selectedDate = document.getElementById('date')
+
+document.addEventListener('DOMContentLoaded', async () => {
+  await loadSchedulesOfTheDay({ selectedDate })
 })
