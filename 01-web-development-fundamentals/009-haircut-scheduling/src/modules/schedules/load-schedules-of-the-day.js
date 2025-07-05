@@ -6,7 +6,7 @@ export async function loadSchedulesOfTheDay({ selectedDate }) {
   const selectedDateValue = selectedDate.value
 
   const schedulesOfTheDay = await getScheduleByDay({ date: selectedDateValue })
-  displaySchedulesOfTheDay({ schedulesOfTheDay })
+  displaySchedulesOfTheDay({ schedulesOfTheDay, selectedDate })
 
   loadHoursForScheduling({ date: selectedDateValue, schedulesOfTheDay })
 }

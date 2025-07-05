@@ -36,10 +36,10 @@ form.onsubmit = async (event) => {
       'hour'
     )
 
-    const schedulingId = new Date().getTime()
+    const scheduleId = new Date().getTime().toString()
 
     const newAppointment = {
-      id: schedulingId,
+      id: scheduleId,
       clientName,
       date: selectedDateWithHour,
     }
