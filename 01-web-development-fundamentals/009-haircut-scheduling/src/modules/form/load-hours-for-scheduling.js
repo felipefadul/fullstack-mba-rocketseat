@@ -5,26 +5,32 @@ import { clickAvailableHours } from './click-available-hours.js'
 
 const hours = document.getElementById('hours')
 
-export function loadHours({ date = dayjs() }) {
+export function loadHoursForScheduling({ date = dayjs(), schedulesOfTheDay }) {
   hours.innerHTML = ''
+
+  const hoursAlreadyScheduled = schedulesOfTheDay.map((schedule) =>
+    dayjs(schedule.date).format('H:mm')
+  )
 
   const openingHoursWithAvailability = openingHours.map((hour) => {
     const currentDate = dayjs()
     const scheduleHour = hour.split(':')[0]
-    const isHourAvailable = dayjs(date)
+    const isHourAlreadyScheduled = hoursAlreadyScheduled.includes(hour)
+    const isHourInTheFuture = dayjs(date)
       .add(scheduleHour, 'hour')
       .isAfter(currentDate)
+    const isHourAvailable = !isHourAlreadyScheduled && isHourInTheFuture
 
     return {
       hour,
-      available: isHourAvailable,
+      isHourAvailable,
     }
   })
 
-  openingHoursWithAvailability.forEach(({ hour, available }) => {
+  openingHoursWithAvailability.forEach(({ hour, isHourAvailable }) => {
     const li = document.createElement('li')
     li.classList.add('hour')
-    li.classList.add(available ? 'hour-available' : 'hour-unavailable')
+    li.classList.add(isHourAvailable ? 'hour-available' : 'hour-unavailable')
     li.textContent = convertHoursTo12hFormat(hour)
 
     if (hour === '9:00') {
