@@ -1,5 +1,5 @@
-import { schedulingDays } from '../schedules/load.js'
+import { loadSchedulesOfTheDay } from '../schedules/load-schedules-of-the-day.js'
 
 const selectedDate = document.getElementById('date')
 
-selectedDate.onchange = () => schedulingDays()
+selectedDate.onchange = () => loadSchedulesOfTheDay()
