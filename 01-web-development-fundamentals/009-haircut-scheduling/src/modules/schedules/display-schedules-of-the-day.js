@@ -31,9 +31,9 @@ export function displaySchedulesOfTheDay({ schedulesOfTheDay, selectedDate }) {
       scheduleItem.append(time, clientName, cancelIcon)
       const hour = dayjs(schedule.date).hour()
 
-      if (hour <= 12) {
+      if (hour < 12) {
         morningPeriod.appendChild(scheduleItem)
-      } else if (hour > 12 && hour <= 18) {
+      } else if (hour >= 12 && hour < 18) {
         afternoonPeriod.appendChild(scheduleItem)
       } else {
         eveningPeriod.appendChild(scheduleItem)
