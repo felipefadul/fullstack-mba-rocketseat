@@ -15,6 +15,7 @@ This repository will evolve as I progress through the MBA. Each project will hav
    - [Roller Skates Animated Landing Page](01-web-development-fundamentals/006-roller-skates-animated-landing-page)
    - [Currency Converter](01-web-development-fundamentals/007-currency-converter)
    - [Refund Request](01-web-development-fundamentals/008-refund-request)
+   - [Haircut Scheduling](01-web-development-fundamentals/009-haircut-scheduling)
 
 ## 📝 About the Rocketseat Full-Stack MBA
 
